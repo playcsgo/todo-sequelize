@@ -1,0 +1,7 @@
+1. 路由設定搬到routes
+2. CURD完善
+3. 只能看到使用者自己的todo
+4. 增加FB登入功能
+5. 加入flash message
+6. 重新製作seed
+7. .env.example修改
