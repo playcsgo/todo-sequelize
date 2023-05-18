@@ -1,10 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../../models')
-const Todo = db.todo
+const Todo = db.Todo
 const User = db.User
 
 router.get('/', (req, res) => {
+  if (!req.user) {
+    return res.redirect('/users/login')
+  }
+  
   return Todo.findAll({
     raw: true,
     nest: true,
